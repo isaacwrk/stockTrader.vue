@@ -7,7 +7,12 @@
 <script>
 import Stock from './Stock.vue'
 export default {
-    components:{Stock}
+    components:{Stock},
+    computed:{
+        stocks(){
+            return this.$store.getters.stocks
+        }
+    }
 }
 </script>
 

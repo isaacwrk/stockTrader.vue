@@ -16,5 +16,10 @@ export default {
         initStocks({commit}){
             commit('setStocks',Stocks)
         }
+    },
+    getters:{
+        stocks(state){
+            return state.stocks
+        }
     }
 }
