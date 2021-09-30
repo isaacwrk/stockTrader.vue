@@ -5,6 +5,10 @@
         <v-icon class="white--text mr-3">info</v-icon>
         <span class="headline white--text font-weight-light">Você pode salvar & carregar os dados</span>
     </v-sheet>
+    <v-sheet :elevation="6" class="pa-2 green darken-1 mt-3">
+        <v-icon class="white--text mr-3">info</v-icon>
+        <span class="headline white--text font-weight-light">Clique em <i>Finalizar dia</i> para iniciar um novo dia!</span>
+    </v-sheet>
     <v-divider class="my-4"></v-divider>
     <p><strong>Seu Saldo:</strong>{{ funds }}</p>
   </div>
