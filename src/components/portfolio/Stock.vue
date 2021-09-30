@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 
 
 export default {
@@ -31,13 +32,15 @@ export default {
         }
     },
     methods:{
-        buyStock(){
+        ...mapActions({sellStockAction: 'sellStock'}),
+        sellStock(){
             const order = {
                 stockId: this.stock.id,
                 stockPrice: this.stock.price,
                 quantity: this.quantity
             }
-            this.$store.dispatch('sellStock',order)
+            this.sellStockAction(order)
+            // this.$store.dispatch('sellStock',order)
             this.quantity = 0
         }
     }
