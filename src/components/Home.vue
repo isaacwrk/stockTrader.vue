@@ -10,13 +10,17 @@
         <span class="headline white--text font-weight-light">Clique em <i>Finalizar dia</i> para iniciar um novo dia!</span>
     </v-sheet>
     <v-divider class="my-4"></v-divider>
-    <p><strong>Seu Saldo:</strong>{{ funds }}</p>
+    <p class="display-1"><strong>Seu Saldo:</strong>{{ funds }}</p>
   </div>
 </template>
 
 <script>
 export default {
-
+  computed:{
+    funds(){
+      return this.$store.getters.funds
+    }
+  }
 }
 </script>
 
