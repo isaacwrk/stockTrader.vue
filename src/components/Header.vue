@@ -11,7 +11,7 @@
         </v-toolbar-items>
 
         <v-spacer></v-spacer>
-        <v-toolbar-itens>
+        <v-toolbar-items>
             <v-btn flat>Finalizar Dia</v-btn>
             <v-menu offset-y>
                 <v-btn flat slot="activator">Salvar & Carregar</v-btn>
@@ -24,7 +24,7 @@
                     </v-list-tile>
                 </v-list>
             </v-menu>
-        </v-toolbar-itens>
+        </v-toolbar-items>
     </v-toolbar>
     
 </template>
