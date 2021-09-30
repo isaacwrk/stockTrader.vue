@@ -1,10 +1,23 @@
 <template>
-  <h1>List all Actions</h1>
+ <v-layout row wrap>
+    <Stock v-for="stock in stocks" :key="stock.id" />
+ </v-layout>
 </template>
 
 <script>
+import Stock from './Stock.vue'
 export default {
-
+    components:{Stock},
+    data(){
+        return{
+            stocks:[
+                {id:1, name:'IBM', price:280},
+                {id:2, name:'Apple', price:500},
+                {id:3, name:'Google', price:450},
+                {id:3, name:'Twitter', price:330},
+            ]
+        }
+    }
 }
 </script>
 
