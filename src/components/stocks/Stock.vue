@@ -10,7 +10,7 @@
                 <v-text-field label="Quantidade" type="number" v-model.number="quantity"></v-text-field>
                 <v-btn class="green darken-3 white--text" 
                 :disabled="insufficientFunds ||quantity <= 0 || !Number.isInteger(quantity)"
-                @click="buyStock">Comprar</v-btn>
+                @click="buyStock">{{ insufficientFunds ? 'Sem Saldo' : 'Comprar'}}</v-btn>
             </v-container>
         </v-card>
     </v-flex>
